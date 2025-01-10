@@ -1,25 +1,58 @@
-# -Key_component_traceability_system
+# Key Component Traceability System
 
--i will present to you my project which has been implemented to solve the problem of recording the barcode of the components like (Led bar, PCB, open-cell) Inside the TV set 
-We worked on our project in the TV factory at #ElAraby_Group*
-Before we started, there was a *Japanese* system called *Snoopy*.
-This system was a manual scanner that scanning the serial number on the components and stored it on a database in the factory , but this system has defects presented in the picture below(1) 👇 The first defect was: The technician must be well trained on using the manual scanner which needs a suitable distance from the serial number to scan it.
-The second defect was : the scanner has low sensitivity, it can only read 25 digits only, and therefore it neglects any data higher than 25.
-The third defect was : This system depends on servers, when the servers go down the network on the laptops also go down , and thus the production line will stop for hours (and this system is not subject to modification).
-Therefore, we created a mobile application to be an alternative to this system,
-as the mobile camera has much higher sensitivity than any manual scanner available in the global markets.
-Watch the video(2)(Vedios in comments) to see how the program works as a scanner in the Production Line and then it records data on the Database (Firebase database)‚show image(A).
-We choose it(Firebase) because it is a product from Google and it has well security, also there are giant companies that use it, we also added a feature in this program that allows you to *Search* for any components recorded on the database from the production line.
-watch the video to see(3).
-__
--After we solved the problem of recording the components and creating a database,
-we tried to take advantage of this database , so we focused on the most important problem in any company , which is customer service.
-So we made another application which the customer can use by scanning the barcode on the guarantee certificate, then inputting his data and send it to the company as shown in the video (4), 
-this data received on Google Sheet shown in the image (5).
-This sheet we added 3 advantages to it.
-the first one is that it is connected to the database, so as soon as the device’s barcode received , the rest of the data of the components inside this device appears immediately. 
-The second feature, is receiving the customer’s data with time and date, so that customer service informs the customer of the date that the technician goes to fix his device.
-The last advantage is that we have created a dead line to respond to the customer as a maximum of four days as long as I have reached the deadline , it will be green , if there is a delay, it will be red, if you finish the solution by closing it, it will be gray.
-__
--Team M Triple A members:
-Amira Mohamed , Mahmoud Elbasit , Ammar yasser ,Alaa Amin Elgezery     
+## Overview
+This project addresses the challenges of recording the barcodes of TV set components (e.g., LED bar, PCB, open-cell) in the production process. The project was implemented at the TV factory of **ElAraby Group** to replace the existing Japanese system, **Snoopy**, with a more efficient solution.
+
+## Problem Statement
+The Snoopy system, a manual scanner for reading and storing serial numbers in a database, had several significant limitations:
+
+1. **Technician Training**: The manual scanner required technicians to be well-trained to maintain the correct scanning distance.
+2. **Low Sensitivity**: The scanner could only read up to 25 digits, ignoring any additional data.
+3. **Dependency on Servers**: The system relied on servers. Any server downtime caused production line disruptions for hours, and the system was not customizable.
+
+## Proposed Solution
+To overcome these limitations, we developed a mobile application as an alternative. The application utilizes the mobile camera, which offers higher sensitivity compared to the manual scanner. The recorded data is stored in a **Firebase Database** for better security and reliability.
+
+### Key Features of the Solution
+1. **Component Scanning**: The mobile application scans barcodes in the production line and stores the data in Firebase.
+2. **Search Functionality**: Users can search for components stored in the database.
+
+![Production Line Scanner](image_A.png)
+
+### Video Demonstrations:
+- **Video 1**: Demonstrates how the program works as a scanner in the production line.
+- **Video 2**: Shows the search functionality for recorded components.
+
+## Extension to Customer Service
+We expanded the solution to enhance customer service by developing another application. This application allows customers to:
+
+1. Scan the barcode on their guarantee certificate.
+2. Input their personal data and send it to the company.
+
+The customer data is received in a **Google Sheet** connected to the Firebase database.
+
+### Advantages of the Google Sheet Integration:
+1. **Component Details**: As soon as the device’s barcode is received, details of its internal components are displayed.
+2. **Customer Data Management**: The customer’s data, along with the time and date of submission, is recorded. This helps customer service schedule technician visits.
+3. **Response Tracking**: A deadline of four days is set for responding to customer issues:
+   - **Green**: Within deadline.
+   - **Red**: Exceeded deadline.
+   - **Gray**: Issue resolved and closed.
+
+![Google Sheet Integration](image_5.png)
+
+### Video Demonstrations:
+- **Video 3**: Demonstrates the customer application and database interaction.
+- **Video 4**: Shows how customer data is managed in the Google Sheet.
+
+## Technologies Used
+1. **Mobile Application**: For barcode scanning and data entry.
+2. **Firebase Database**: A secure and reliable database from Google.
+3. **Google Sheets**: For integrating customer service data.
+
+## Team Members
+- **Amira Mohamed**
+- **Mahmoud Elbasit**
+- **Ammar Yasser**
+- **Alaa Amin Elgezery**
+
